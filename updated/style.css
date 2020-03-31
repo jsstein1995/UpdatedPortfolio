@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: #000b18;
+  background: rgb(0, 119, 255);
   overflow-x: hidden;
   cursor: none;
 }
