@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="../2x/fav2@2x.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/fav2@2x.png">
     <title>Jackson Stein</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body onload = "followMouse();">
     <div class="cursor" id="ball"></div>
@@ -16,19 +18,31 @@
         <div class="loader">
             <img class="loadingGif" src="assets/loading.gif" alt="loader">
         </div>
-        <div class=lightMode>  
-            <div>Light Mode</div>
-            <span class="material-icons">nights_stay</span>
-            <span class="material-icons">wb_sunny</span>
+        <div class="hidden-left">
+            
         </div>
         <nav>
             <div class='navContainer'>
                 <ul class='nav-links'>
-                    <li>Contact</li>
-                    <li><img class='logo' src="assets/personalLogo.gif" alt="Logo"></li>
+                    <li class='contact'>LEARN MORE <b>ABOUT ME</b></li>
+                    <div class="logoContainer">
+                        <!-- <li><img class='logo' src="assets/Logo.gif" alt="Logo"></li> -->
+                       <img class='logoStatic' src="assets/StaticLogo@3x.png" alt="Logo">
+                   </div>
+                   <!-- <hr class = "leftLine"> -->
+                    <div class="linesDiv">
+                        <hr lass = "leftLine">
+                        <div class = "leftLineDark"></div> 
+                    </div>
+                    <li class="emptyLogo">
+                    </li>
+                    <div class="linesDiv">
+                        <hr class = "rightLine">
+                        <div class = "rightLineDark"></div>
+                    </div>
                     <li class='portfolioLink'
-                        @mouseover="displayText = true">Portfolio
-                        <img class='rightArrow' src="assets/arrow@3x.png" alt="Logo">
+                        @mouseover="displayText = true"
+                        @mouseleave="displayText = false">SEE MY<b> WEB APPLICATIONS</b>
                     </li>
                 </ul>
             </div>  
@@ -37,14 +51,14 @@
             <div class="letterContainer"
             v-for='(letter, index) in bioLetters'>
                 <span class="letters bio">{{letter}}</span>
-                <div class="textHideBoxes" ></div>
+                <div class="textHideBoxes small" ></div>
             </div>
         </div>
         <div v-if='displayText' class="animatedText"> 
             <div class="letterContainer"
             v-for='(letter, index) in letters'>
                 <span class="letters">{{letter}}</span>
-                <div class="textHideBoxes" ></div>
+                <div class="textHideBoxes large" ></div>
             </div>
         </div>
     </div>
@@ -56,7 +70,11 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> <!-- minified-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> minified -->
 <script src="sketch.js"></script>
+<script src="main.js"></script>
+<!-- Flickity JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 
