@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbana, sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+a { 
+    color: inherit;
+    text-decoration: none; 
+} 
+.main-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+}
+.rocks-image {
+    height: 30rem;
+    width: 100%;
+    height: auto;
+    opacity: .95;
+}
+.landing-section {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.nav-links-top {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    padding: 2rem;
+    cursor: default;
+    letter-spacing: 2px;
+}
+.short-logo {
+    max-width: 4rem;
+}
+.top-color-1 {
+    width: 100%;
+    background-color: rgb(236, 75, 182);
+    opacity: .3;
+    height: 24rem;
+    position: absolute;
+    bottom: -15rem;
+}
+.top-color-2 {
+    width: 100%;
+    background-color: rgb(125, 155, 255);
+    opacity: .4;
+    height: 12rem;
+    position: relative;
+    top: -.25rem;
+}
+section.long-bio > p {
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: .8rem;
+    line-height: 10rem;
+}
+section {
+    padding: 4rem;
+    padding-left: 8rem;
+}
+.port {
+    font-size: 2rem;
+    letter-spacing: 13rem;
+    font-weight: 700;
+    opacity: .85;
+    z-index: 100;
+}
+.job-title-container {
+    top: 8rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.line1, .line2, .line3,.line4, .line5, .line6 {
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    padding: 2rem;
+    left: 14rem;
+    -webkit-animation: moveJobText 1s;
+            animation: moveJobText 1s;
+            animation-delay: .2s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -ms-user-select: none;
+        user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.line1 {
+    top: 5rem;
+}
+.line2 {
+    top: 15rem;
+    left: 28rem;
+}
+.line3 {
+    top: 25rem;
+}
+.line4 {
+    top: 35rem;
+    left: 28rem;
+}
+.line5 {
+    top: 45rem;
+}
+.line6 {
+    top: 55rem;
+    left: 28rem;
+}
+.TextBox {
+    height: 10rem;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    -webkit-animation: boxes 1.2s;
+            animation: boxes 1.2s;
+            animation-delay: .2s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  @-webkit-keyframes moveJobText {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-10rem);
+              transform: translateX(-10rem);
+    }
+  }
+  
+  @keyframes moveJobText {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-10rem);
+              transform: translateX(-10rem);
+    }
+  }

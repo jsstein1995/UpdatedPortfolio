@@ -67,7 +67,7 @@ navLinks.forEach(links => {
   });
 });
 
-$on('mousemove', function (e) {
+$on('mousemove', function () {
   $('.rightLineDark').style.width = (xmouse / 5) - 150 + "%";
   $('.leftLineDark').style.width = (xmouse / 5) - 80 + "%";
 });
@@ -80,7 +80,15 @@ var app = new Vue({
     bio: 'Front-End.Developer.UI-Designer.Creative.VUE-Developer.Coder.Web-Designer',
     letters: [],
     bioLetters: [],
-    displayText: false
+    displayText: false,
+    // topText: {
+    //   line1: 'FRONT-',
+    //   line2: 'END',
+    //   line3: 'DEVELOPER',
+    //   line4: '&',
+    //   line4: 'UI.DEVELOPER',
+    // },
+    // topTextDisplay: false
   },
   methods: {
     splitName: function () {

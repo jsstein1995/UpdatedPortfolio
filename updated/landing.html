@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Flickity CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- jquery CDN-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin="anonymous"></script>
 </head>
 <body onload = "followMouse();">
     <div class="cursor" id="ball"></div>
@@ -18,13 +23,17 @@
         <div class="loader">
             <img class="loadingGif" src="assets/loading.gif" alt="loader">
         </div>
-        <div class="hidden-left">
-            
-        </div>
+        <!-- <div class="hidden-container">
+            <div class="hidden-left"></div>
+            <div class="hidden-right"
+                 @mouseover="displayText = true"
+                 @mouseleave="displayText = false">
+            </div>
+        </div> -->
         <nav>
             <div class='navContainer'>
                 <ul class='nav-links'>
-                    <li class='contact'>LEARN MORE <b>ABOUT ME</b></li>
+                    <li class='contact'>SEE MY <b>RESUME</b></li>
                     <div class="logoContainer">
                         <!-- <li><img class='logo' src="assets/Logo.gif" alt="Logo"></li> -->
                        <img class='logoStatic' src="assets/StaticLogo@3x.png" alt="Logo">
@@ -40,10 +49,13 @@
                         <hr class = "rightLine">
                         <div class = "rightLineDark"></div>
                     </div>
-                    <li class='portfolioLink'
-                        @mouseover="displayText = true"
-                        @mouseleave="displayText = false">SEE MY<b> WEB APPLICATIONS</b>
-                    </li>
+                    <div class='portfolioLink'
+                         @mouseover="displayText = true"
+                         @mouseleave="displayText = false">
+                        SEE MY<b> PORTFOLIO</b>
+                        <img class="arrow" src="assets/arrow@3x.png" alt="arrow">
+                    </div>
+                    
                 </ul>
             </div>  
         </nav>
@@ -65,10 +77,6 @@
 </body>
 </html>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> minified -->
