@@ -46,10 +46,25 @@ var app = new Vue({
           this.line4Letters = text4
           this.line5Letters = text5
           this.line6Letters = text6
-      }
+        },
+        loadLanding: function () {
+            //image & jobTitle fade in
+            var elements = ['nav-links-top','rocks-image','job-title-container'];
+
+            for (let i = 0; i < elements.length; i++) {
+                var thisElement = $("." + elements[i]); //Get the current element based on class
+                fadeInElement(thisElement, i);          //Call our "Fade in" function
+            }
+            function fadeInElement(elem, time) {      //Fade-in function that takes the element to fade-in, and the time it should wait
+                setTimeout(function() {
+                    elem.css("opacity", ".95");             //Set our element's opacity to 1
+                }, 1650 * time);                        //Set the time it should wait
+            }
+        }
     },
     mounted () {
       this.splitLines();
+      this.loadLanding();
     }
   })
 

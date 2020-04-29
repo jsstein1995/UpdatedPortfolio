@@ -23,7 +23,8 @@ a {
     height: 30rem;
     width: 100%;
     height: auto;
-    opacity: .95;
+    opacity: 0;
+    transition: opacity 1s;
 }
 .landing-section {
     width: 100%;
@@ -37,6 +38,7 @@ a {
     width: 100%;
     padding: 2rem;
     cursor: default;
+    font-size: 1.5rem;
     letter-spacing: 2px;
 }
 .short-logo {
@@ -69,9 +71,9 @@ section {
     padding-left: 8rem;
 }
 .port {
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 13rem;
-    font-weight: 700;
+    font-weight: 400;
     opacity: .85;
     z-index: 100;
 }
