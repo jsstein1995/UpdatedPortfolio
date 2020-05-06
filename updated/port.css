@@ -7,18 +7,29 @@
 ::-webkit-scrollbar {
     display: none;
 }
+body {
+    letter-spacing: .1rem;
+}
 a { 
     color: inherit;
     text-decoration: none; 
 } 
 .main-nav {
     position: absolute;
-    top: 0;
+    /* top: -6rem; */
     width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 20;
+    animation-name: slideIn;
+    animation-duration: 1.5s;
+    animation-delay: -.5s;
+    animation-timing-function: ease;
 }
+@keyframes slideIn {
+    0%   {top: -12rem;}
+    100% {top: 0rem;}
+  }
 .rocks-image {
     height: 30rem;
     width: 100%;
@@ -41,27 +52,30 @@ a {
     font-size: 1.5rem;
     letter-spacing: 2px;
 }
+.email-link:hover {
+    text-decoration: underline;
+}
 .short-logo {
     max-width: 4rem;
 }
 .top-color-1 {
     width: 100%;
-    background-color: rgb(236, 75, 182);
-    opacity: .3;
+    background-color: rgb(229, 188, 111);
+    opacity: .42;
     height: 24rem;
     position: absolute;
     bottom: -15rem;
 }
 .top-color-2 {
     width: 100%;
-    background-color: rgb(125, 155, 255);
-    opacity: .4;
+    background-color: rgb(255, 168, 5);
+    opacity: .13;
     height: 12rem;
     position: relative;
     top: -.25rem;
 }
 section.long-bio > p {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 300;
     letter-spacing: .8rem;
     line-height: 10rem;
@@ -69,6 +83,7 @@ section.long-bio > p {
 section {
     padding: 4rem;
     padding-left: 8rem;
+    padding-right: 8rem;
 }
 .port {
     font-size: 3rem;
@@ -97,7 +112,7 @@ section {
     left: 14rem;
     -webkit-animation: moveJobText 1s;
             animation: moveJobText 1s;
-            animation-delay: .2s;
+            animation-delay: 1s;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
     -webkit-animation-fill-mode: both;
@@ -138,30 +153,106 @@ section {
     right: 0;
     -webkit-animation: boxes 1.2s;
             animation: boxes 1.2s;
-            animation-delay: .2s;
+            animation-delay: 1s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
-  }
-  @-webkit-keyframes moveJobText {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-10rem);
-              transform: translateX(-10rem);
-    }
-  }
-  
-  @keyframes moveJobText {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-10rem);
-              transform: translateX(-10rem);
-    }
-  }
+}
+@-webkit-keyframes moveJobText {
+0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+100% {
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+}
+}
+
+@keyframes moveJobText {
+0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+100% {
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+}
+}
+.big-numbers {
+    display: flex;
+    justify-content: space-between;
+}
+.number-group {
+    text-align: center;
+}
+.years {
+    font-size: 10rem;
+    font-weight: 300;
+}
+.years-description {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.career-section-container {
+    position: relative;
+    background: black;
+    padding: 2rem;
+    padding-top: 4rem;
+    overflow-y: hidden;
+}
+.big-number {
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.career-section-title {
+    font-size: 10rem;
+    color: white;
+    opacity: .9;
+    position: absolute;
+    width: 100%;
+}
+.position-title {
+    font-size: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    color: white;
+    opacity: .95;
+}
+.position-years {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    color: white;
+    opacity: .8;
+    font-weight: 500;
+}
+.position-description {
+    font-size: 1rem;
+    color: white;
+    opacity: .8;
+    max-width: 50rem;
+    line-height: 3rem;
+    padding-bottom: 8rem;
+}
+.company-logo-container {
+    position: absolute;
+    right: 5rem;
+    top: 7.5rem;
+}
+.callbox-logo {
+    max-width: 50rem;
+    opacity: .3;
+}
+.position {
+    position: relative;
+    padding: 4rem;
+    margin-top: 15rem;
+}
+span.cb-Link:hover {
+    text-decoration: underline;
+}
+.callboxEx {
+    height: 100rem;
+}

@@ -1,3 +1,4 @@
+
 var app = new Vue({
     el:'#app2',
     data: {
@@ -26,7 +27,25 @@ var app = new Vue({
       line3Letters: [],
       line4Letters: [],
       line5Letters: [],
-      line6Letters: []
+      line6Letters: [],
+      yearGroups: [
+        {
+            number: '01',
+            title: 'Developing Positions'
+        },
+        {
+            number: '02',
+            title: 'Years Developing'
+        },
+        {
+            number: '03',
+            title: 'Years of Freelance Design'
+        },
+        {
+            number: '25',
+            title: 'Years Lived'
+        }
+      ]
     },
     methods: {
       splitBio: function () {
@@ -58,7 +77,7 @@ var app = new Vue({
             function fadeInElement(elem, time) {      //Fade-in function that takes the element to fade-in, and the time it should wait
                 setTimeout(function() {
                     elem.css("opacity", ".95");             //Set our element's opacity to 1
-                }, 1650 * time);                        //Set the time it should wait
+                }, 1650 * time + 500);                        //Set the time it should wait
             }
         }
     },
@@ -69,18 +88,18 @@ var app = new Vue({
   })
 
   //portfolio page Parallax
-window.addEventListener('scroll', function(e) {
-    const redBar = document.querySelector('.top-color-1');
-    const jobTitle = document.querySelectorAll('.jobTitle')
-    var scrolled = window.pageYOffset;
-    var rate = scrolled * -.1;
-    if (rate > -80) {
-        redBar.style.transform = 'translate3d(0px, '+rate+'px, 0px)';
-    }
-    for ( var i = 0; length = jobTitle.length; i++ ) {
-        var pos = window.pageYOffset * jobTitle[i].dataset.rate;
-        if (rate > -150) {
-            jobTitle[i].style.transform = 'translate3d(0px, '+(pos)+'px, 0px)';
-        }
-    }
-  })
+// window.addEventListener('scroll', function(e) {
+//     const topBar = document.querySelector('.top-color-1');
+//     const jobTitle = document.querySelectorAll('.jobTitle')
+//     var scrolled = window.pageYOffset;
+//     var rate = scrolled * -.1;
+//     if (rate > -130) {
+//         topBar.style.transform = 'translate3d(0px, '+rate+'px, 0px)';
+//     }
+//     for ( var i = 0; length = jobTitle.length; i++ ) {
+//         var pos = window.pageYOffset * jobTitle[i].dataset.rate;
+//         if (rate > -150) {
+//             jobTitle[i].style.transform = 'translate3d(0px, '+(pos)+'px, 0px)';
+//         }
+//     }
+//   })

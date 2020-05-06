@@ -6,8 +6,13 @@
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="port.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="/UpdatedPortfolio/updated/assets/fav2@2x.png">
 </head>
-<body>
+
+<body onload = "followMouse();">
+    <div class="cursor" id="ball"></div>
+    <div class="cursorPoint"></div>
+
     <div id="app2">
         <nav class="main-nav">
             <ul class="nav-links-top">
@@ -17,77 +22,103 @@
                 <li>
                     PORTFOLIO OF A 
                 </li>
-                <li>
+                <li class="email-link">
                     <a href="mailto:jsstein1995@gmail.com">JSSTEIN1995@GMAIL.COM</a>
                 </li>
             </ul>
         </nav>
         <div class="landing-section">
             <img class="rocks-image" src="assets/rocks.jpg" alt="top_image">
+
             <div class="top-color-1"></div>
 
-
-<div class="job-title-container">
-    <div v-if='topTextDisplay' class="line1">
-        <div class="letterContainer jobTitle" data-rate="-.2"
-        v-for='(letter, index) in line1Letters'>
-            <span class="port">{{letter}}</span>
-            <div class="TextBox" ></div>
-        </div>
-    </div>
-    <div v-if='topTextDisplay' class="line2">
-        <div class="letterContainer jobTitle" data-rate="-.2"
-        v-for='(letter, index) in line2Letters'>
-            <span class="port">{{letter}}</span>
-            <div class="TextBox" ></div>
-        </div>
-    </div>
-    <div v-if='topTextDisplay' class="line3">
-        <div class="letterContainer jobTitle" data-rate="-.2"
-        v-for='(letter, index) in line3Letters'>
-            <span class="port">{{letter}}</span>
-            <div class="TextBox" ></div>
-        </div>
-    </div>
-    <div v-if='topTextDisplay' class="line4">
-        <div class="letterContainer jobTitle" data-rate="-.2"
-        v-for='(letter, index) in line4Letters'>
-            <span class="port">{{letter}}</span>
-            <div class="TextBox" ></div>
-        </div>
-    </div>
-    <div v-if='topTextDisplay' class="line5">
-        <div class="letterContainer jobTitle" data-rate="-.2"
-        v-for='(letter, index) in line5Letters'>
-            <span class="port">{{letter}}</span>
-            <div class="TextBox" ></div>
-        </div>
-    </div>
-    <div v-if='topTextDisplay' class="line6">
-        <div class="letterContainer jobTitle" data-rate="-.2"
-        v-for='(letter, index) in line6Letters'>
-            <span class="port">{{letter}}</span>
-            <div class="TextBox" ></div>
-        </div>
-    </div>
-</div>
-
-
-            <!-- <div class="port animatedText">
-                <div class="port letterContainer"
-                    v-for='word in topText'>
-                    <div class="jobTitle">{{word}}</div>
+            <div class="job-title-container">
+                <div v-if='topTextDisplay' class="line1">
+                    <div class="letterContainer jobTitle" data-rate="-.2"
+                    v-for='(letter, index) in line1Letters'>
+                        <span class="port">{{letter}}</span>
+                        <div class="TextBox" ></div>
+                    </div>
                 </div>
-            </div> -->
+                <div v-if='topTextDisplay' class="line2">
+                    <div class="letterContainer jobTitle" data-rate="-.2"
+                    v-for='(letter, index) in line2Letters'>
+                        <span class="port">{{letter}}</span>
+                        <div class="TextBox" ></div>
+                    </div>
+                </div>
+                <div v-if='topTextDisplay' class="line3">
+                    <div class="letterContainer jobTitle" data-rate="-.2"
+                    v-for='(letter, index) in line3Letters'>
+                        <span class="port">{{letter}}</span>
+                        <div class="TextBox" ></div>
+                    </div>
+                </div>
+                <div v-if='topTextDisplay' class="line4">
+                    <div class="letterContainer jobTitle" data-rate="-.2"
+                    v-for='(letter, index) in line4Letters'>
+                        <span class="port">{{letter}}</span>
+                        <div class="TextBox" ></div>
+                    </div>
+                </div>
+                <div v-if='topTextDisplay' class="line5">
+                    <div class="letterContainer jobTitle" data-rate="-.2"
+                    v-for='(letter, index) in line5Letters'>
+                        <span class="port">{{letter}}</span>
+                        <div class="TextBox" ></div>
+                    </div>
+                </div>
+                <div v-if='topTextDisplay' class="line6">
+                    <div class="letterContainer jobTitle" data-rate="-.2"
+                    v-for='(letter, index) in line6Letters'>
+                        <span class="port">{{letter}}</span>
+                        <div class="TextBox" ></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="top-color-2"></div>
+
         <section class="long-bio">
             <p>Hi, I’m Jackson. I love</p>
             <p>designing</p>
             <p>and coding</p>
-            <p>user</p>
-            <p>interfaces</p>
-            <p>in Javascript.</p>
+            <p>user interfaces in </p>
+            <!-- <p>interfaces</p> -->
+            <p>Javascript.</p>
+        </section>
+
+        <section class="big-numbers">
+            <div class="number-group"
+                v-for='(years, index) in yearGroups'>
+                <div class="years">{{years.number}}</div>
+                <div class="years-description">{{years.title}}</div>
+            </div>
+        </section>
+
+        <div class='career-section-container'>
+            <span class="big-number">
+                <div class="career-section-title">Professional Experience</div>
+            </span>
+            <div class="position">
+                <div class="position-years">
+                    2019-2020
+                </div>
+                <div class="company-logo-container">
+                    <img class="callbox-logo" src="assets/callbox@3x.png" alt="callbox-logo">
+                </div>
+                <div class="position-title">
+                    Developer / UI Designer at <span class="cb-Link"><a href="https://www.callbox.com/" target="blank">Call Box</a></span>
+                </div>
+                <p class="position-description">
+                    Front-End Developer and UI Designer, updating their UI and building fresh new components 
+                    for their web and mobile texting platform in an Agile development environment.
+                </p>
+            </div>
+        </div>
+        <section class="callboxEx">
+
         </section>
     </div>
 </body>
@@ -103,6 +134,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> minified -->
 <!-- <script src="sketch.js"></script> -->
+
 <script src="portfolio.js"></script>
 <!-- Flickity JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
