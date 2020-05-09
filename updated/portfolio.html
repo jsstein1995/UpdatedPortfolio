@@ -7,33 +7,50 @@
     <link rel="stylesheet" type="text/css" href="port.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" type="image/png" href="/UpdatedPortfolio/updated/assets/fav2@2x.png">
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- jquery CDN-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin="anonymous"></script>
 </head>
 
-<body onload = "followMouse();">
-    <div class="cursor" id="ball"></div>
-    <div class="cursorPoint"></div>
+<body>
 
     <div id="app2">
         <nav class="main-nav">
             <ul class="nav-links-top">
-                <li>
-                    <img class="short-logo" src="assets/short@3x.png" alt="short-logo">
-                </li>
-                <li>
-                    PORTFOLIO OF A 
+                <li><a href="/UpdatedPortfolio/updated/landing.html">
+                        <img class="short-logo" src="assets/short@3x.png" alt="short-logo">
+                    </a>    
                 </li>
                 <li class="email-link">
-                    <a href="mailto:jsstein1995@gmail.com">JSSTEIN1995@GMAIL.COM</a>
+                    <a class="fancy-link" href="mailto:jsstein1995@gmail.com">JSSTEIN1995@GMAIL.COM</a>
                 </li>
             </ul>
+            <div class="centerTitle">
+                PORTFOLIO OF A 
+            </div>
         </nav>
         <div class="landing-section">
-            <img class="rocks-image" src="assets/rocks.jpg" alt="top_image">
+            <div class="rocks-container">
+                <img class="rocks-image" src="assets/front-rocks.png" alt="top_image">
+                <!-- <img class="rocks-image" src="assets/rocks.jpg" alt="top_image"> -->
+            </div>
+            <div class="rainbow-container">
+                <!-- <img class="rainbow pink" src="assets/pink.png" alt="rainbow-color">
+                <img class="rainbow blue" src="assets/blue.png" alt="rainbow-color">
+                <img class="rainbow green" src="assets/green.png" alt="rainbow-color"> -->
+                <!-- <img class="rainbow pink" src="assets/darkBlue.png" alt="rainbow-color">
+                <img class="rainbow blue" src="assets/darkBlue.png" alt="rainbow-color">
+                <img class="rainbow green" src="assets/darkBlue.png" alt="rainbow-color"> -->
+            </div>
 
             <div class="top-color-1"></div>
 
             <div class="job-title-container">
-                <div v-if='topTextDisplay' class="line1">
+                <div v-if='topTextDisplay' class="line1 sliding">
                     <div class="letterContainer jobTitle" data-rate="-.2"
                     v-for='(letter, index) in line1Letters'>
                         <span class="port">{{letter}}</span>
@@ -68,13 +85,13 @@
                         <div class="TextBox" ></div>
                     </div>
                 </div>
-                <div v-if='topTextDisplay' class="line6">
+                <!-- <div v-if='topTextDisplay' class="line6">
                     <div class="letterContainer jobTitle" data-rate="-.2"
                     v-for='(letter, index) in line6Letters'>
                         <span class="port">{{letter}}</span>
                         <div class="TextBox" ></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -98,18 +115,23 @@
         </section>
 
         <div class='career-section-container'>
-            <span class="big-number">
-                <div class="career-section-title">Professional Experience</div>
+            <span class="big-text">
+                <div class="career-section-title-small">My short Career History</div>
             </span>
             <div class="position">
                 <div class="position-years">
                     2019-2020
                 </div>
-                <div class="company-logo-container">
-                    <img class="callbox-logo" src="assets/callbox@3x.png" alt="callbox-logo">
-                </div>
                 <div class="position-title">
-                    Developer / UI Designer at <span class="cb-Link"><a href="https://www.callbox.com/" target="blank">Call Box</a></span>
+                    FE Developer / UI Designer  <br> at &nbsp;
+                    <div class="cb-Link">
+                        <a class="cb-fancy-link" href="https://www.callbox.com/" target="blank">Call Box</a>
+                        <div class="company-logo-container">
+                            <a href="https://www.callbox.com/" target="blank">
+                                <img id="callbox-logo" class="callbox-logo" src="assets/callbox@3x.png" alt="callbox-logo">
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <p class="position-description">
                     Front-End Developer and UI Designer, updating their UI and building fresh new components 
@@ -117,19 +139,100 @@
                 </p>
             </div>
         </div>
-        <section class="callboxEx">
+        <section class="callbox-web">
+            <span class="big-text">
+                <div class="cb-projects-title">Call Box Projects</div>
+            </span>
+            <div class="cb-websites-container">
+                <div class="cb-websites-info-section">
+                    <div class="cb-websites-info-title">
+                        Websites & Emails
+                    </div>
+                    <div class="cb-websites-info">
+                        Front-End Developer and UI Designer, updating their UI and building 
+                        fresh new components for their web and mobile texting platform 
+                        in an Agile development environment.
+                    </div>
 
+                </div>
+                <div class="cb-project-images-container">
+                    <img class="callbox-website-img" src="assets/websites.png" alt="websites-img">
+                    <img class="callbox-email-img" src="assets/emails.jpg" alt="email-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="cb-wheel-section">
+            <div class="cb-websites-info-title">
+                Call Box Platform Projects
+            </div>
+
+            <!-- Flickity HTML init -->
+            <div class="carousel" data-flickity='{ "lazyLoad": true, "wrapAround": true }'>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/callbox-app.png" alt="wolf" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cb-pic1.png" alt="tulip" />
+                    <div class="project-description">
+                        Project Description here
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/mxYouSmall.png" alt="wolf" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/mxyou.png" alt="wolf" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/workingtable.gif" alt="raspberries" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/trackingLines.png" alt="wolf" />
+                </div>
+            </div>        
+        </section>
+
+        <section class="tendi-section">
+            <div class="cb-websites-info-title light">
+                CallBox Platform Projects
+            </div>
+
+            <!-- Flickity HTML init -->
+            <div class="carousel" data-flickity='{ "lazyLoad": true, "wrapAround": true }'>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/cb-pic1.png" alt="tulip" />
+                    <div class="project-description">
+                        HELLO
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/newyou.PNG" alt="wolf" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/workingtable.gif" alt="raspberries" />
+                </div>
+                <div class="carousel-cell">
+                    <img class="carousel-cell-image"
+                    data-flickity-lazyload="assets/Artboard – 2.png" alt="wolf" />
+                </div>
+            </div>        
         </section>
     </div>
 </body>
 </html>
 
-<script
-  src="https://code.jquery.com/jquery-3.5.0.js"
-  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-  crossorigin="anonymous"></script>
 <!-- p5 CANVAS LINK -->
-<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script> -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> minified -->

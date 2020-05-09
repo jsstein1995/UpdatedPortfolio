@@ -1,22 +1,21 @@
+:root {
+  --main-white: #f6f6f7;
+}
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Urbana, sans-serif;
+  background-color: var(--main-white);
 }
-
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: rgb(255, 255, 255);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   cursor: none;
   font-weight: 200;
 }
-
 canvas {
-  display: block;
-  opacity: .5;
+  display: block !important;
+  opacity: .15;
 }
 hr { 
   color: rgb(0, 0, 0); 
@@ -52,7 +51,7 @@ hr {
 .leftLineDark {
   background-color: rgb(255, 255, 255);
   position: absolute;
-  opacity: .6;
+  opacity: .45;
   height: 2px;
   width: 18%;
   max-width: 100%;
@@ -77,6 +76,7 @@ hr {
 .logo {
   position: absolute;
   max-width: 14rem;
+  top: -3.9rem;
   -ms-user-select: none;
   user-select: none;
   -moz-user-select: none;
@@ -120,7 +120,7 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 150;
+  z-index: 450;
 }
 
 .loader.hidden {
@@ -252,7 +252,7 @@ hr {
   transition-property: background, transform, -webkit-transform;
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
-  z-index: 10;
+  z-index: 400;
 }
 
 .cursorPoint {
@@ -270,7 +270,7 @@ hr {
   transition-property: background, transform;
   transition-property: background, transform, -webkit-transform;
   position: absolute;
-  z-index: 10;
+  z-index: 400;
 }
 
 #ball {
@@ -292,7 +292,7 @@ hr {
   -webkit-transform: scale(8);
           transform: scale(8);
   background: white;
-  opacity: .4;
+  opacity: .2;
 }
 
 .hovered-link {
@@ -303,12 +303,22 @@ hr {
 .hovered-link-point {
   display: none;
 }
+.portfolioLink a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.portfolioLink a:visited {
+  text-decoration: none;
+  color: black;
+}
 
 .letters {
   color: rgb(0, 0, 0);
   /* background-color: rgb(255, 255, 255); */
   font-size: 20rem;
   font-weight: 500;
+  opacity: 1;
 }
 
 .letters.bio {
@@ -414,7 +424,7 @@ hr {
 .textHideBoxes.small {
   height: 10rem;
   width: 15rem;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--main-white);
   display: inline-block;
   position: absolute;
   right: 0;
@@ -430,7 +440,7 @@ hr {
 .textHideBoxes.large {
   height: 18rem;
   width: 15rem;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--main-white);
   display: inline-block;
   position: absolute;
   right: 0;

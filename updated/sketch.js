@@ -41,8 +41,10 @@ var y3off9 = 2750;
 var y3off10 = 2800;
 var y3off11 = 2850;
 
+var renderer;
+
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+  renderer = createCanvas(windowWidth, windowHeight);
 }
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
@@ -128,9 +130,28 @@ function draw() {
     y3off10 += 0.001;
     y3off11 += 0.001;
 
+     // Top mountains
+     fill(color(253, 12, 152, 80));
+     noStroke();
+     beginShape();
+     vertex(-400, height);
+     vertex(width * 0.1, ya / 5);
+     vertex(width * 0.3, ya1 / 5);
+     vertex(width * 0.35, ya2 / 2);
+     vertex(width * 0.45, ya3 / 2);
+     vertex(width * 0.50, ya4 / 2);
+     vertex(width * 0.55, ya5 / 2);
+     vertex(width * 0.62, ya6 / 2);
+     vertex(width * 0.65, ya7 / 3);
+     vertex(width * 0.70, ya8 / 3);
+     vertex(width * 0.78, ya9 / 4);
+     vertex(width * 0.85, ya10 / 5);
+     vertex(width * 0.9, ya11 / 5);
+     vertex(width + 500, height);
+     endShape();
 
     //Middle Mountains
-    fill(color(4, 68, 216, 100));
+    fill(color(122, 25, 250, 80));
     noStroke();
     beginShape();
     vertex(-300, height);
@@ -149,28 +170,8 @@ function draw() {
     vertex(width+200, height);
     endShape();
 
-    // Top mountains
-    fill(color(253, 52, 152, 50));
-    noStroke();
-    beginShape();
-    vertex(-400, height);
-    vertex(width * 0.1, ya / 5);
-    vertex(width * 0.3, ya1 / 5);
-    vertex(width * 0.35, ya2 / 2);
-    vertex(width * 0.45, ya3 / 2);
-    vertex(width * 0.50, ya4 / 2);
-    vertex(width * 0.55, ya5 / 2);
-    vertex(width * 0.62, ya6 / 2);
-    vertex(width * 0.65, ya7 / 3);
-    vertex(width * 0.70, ya8 / 3);
-    vertex(width * 0.78, ya9 / 4);
-    vertex(width * 0.85, ya10 / 5);
-    vertex(width * 0.9, ya11 / 5);
-    vertex(width + 500, height);
-    endShape();
-
     //Bottom Mountains
-    fill(color(2, 25, 180, 100));
+    fill(color(2, 25, 250, 120));
     noStroke();
     beginShape();
     vertex(-280, height);
