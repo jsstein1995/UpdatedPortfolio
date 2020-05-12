@@ -131,7 +131,7 @@ function draw() {
     y3off11 += 0.001;
 
      // Top mountains
-     fill(color(253, 12, 152, 80));
+     fill(color(2, 25, 250, 120));
      noStroke();
      beginShape();
      vertex(-400, height);
@@ -151,7 +151,7 @@ function draw() {
      endShape();
 
     //Middle Mountains
-    fill(color(122, 25, 250, 80));
+    fill(color(2, 25, 250, 120));
     noStroke();
     beginShape();
     vertex(-300, height);

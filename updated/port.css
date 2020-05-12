@@ -356,12 +356,12 @@ section {
     color: var(--main-white);
     position: absolute;
     right: -200rem;
-    padding-top: 4rem;
+    padding-top: 14rem;
 }
 .career-section-title-small {
     color: var(--main-white);
     padding-top: 4rem;
-    font-size: 4rem;
+    font-size: 14rem;
 }
 .position-title {
     font-size: 2rem;
@@ -438,10 +438,10 @@ div.cb-Link a:hover {
 .cb-Link a{
     cursor: pointer !important;
 }
-.callbox-web {
+/* .callbox-web {
     height: 100rem;
     margin-bottom: 22rem;
-}
+} */
 .cb-projects-title {
     margin-top: 4rem;
     position: absolute;
@@ -456,7 +456,11 @@ div.cb-Link a:hover {
     padding-right: 8rem;
 }
 .callbox-website-img {
-    max-width: 30rem;
+    width: 50%;
+    position: relative;
+    border: 0px solid;
+    box-shadow: .5rem 1rem 5rem rgba(0, 0, 0, 0.4);
+    z-index: 10;
 }
 .cb-websites-info-title {
     width: 100%;
@@ -467,22 +471,16 @@ div.cb-Link a:hover {
     line-height: 3rem;
     font-size: 1.5rem;
 }
-.callbox-website-img, .callbox-email-img {
-    position: absolute;
-    border: 0px solid;
-    box-shadow: .5rem 1rem 5rem rgba(0, 0, 0, 0.4);
-}
 .cb-wheel-section {
     padding-top: 0 !important;
 }
-.callbox-website-img {
-    z-index: 10;
-    left: 20rem;
-}
 .callbox-email-img {
-    max-width: 24rem;
-    right: 18rem;
-    top: 18rem;
+    position: absolute;
+    width: 40%;    
+    right: 2rem;
+    top: 8rem;
+    border: 0px solid;
+    box-shadow: .5rem 1rem 5rem rgba(0, 0, 0, 0.4);
 }
 .callbox-email-img:hover {
     z-index: 100;
@@ -513,6 +511,9 @@ div.cb-Link a:hover {
     -webkit-transition: opacity 0.4s;
             transition: opacity 0.4s;
   }
+  .carousel-cell-image.first {
+      transform: scale(1.2);
+  }
   
   /* fade in lazy loaded image */
   .carousel-cell-image.flickity-lazyloaded,
@@ -527,9 +528,12 @@ div.cb-Link a:hover {
     margin-top: 4rem;
     font-size: 1rem;
 }
-
-
-
+.tendi-section {
+    height: 100rem;
+}
+.tendi1 {
+    width: 70%;
+}
 
 
 

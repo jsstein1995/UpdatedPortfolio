@@ -1,0 +1,70 @@
+.bio-container {
+    text-align: center;
+    width: 100%;
+    padding-top: 10rem;
+}
+.bio-container > div {
+    padding: .5rem;
+}
+.selfie {
+    border-radius: 50%;
+    max-width: 8rem;
+}
+.resume-btn {
+    border: none;
+    font-family: Urbana, sans-serif;
+    background-color: transparent;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .5rem;
+    border: solid 2px black;
+    border-radius: 3px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: .5rem;
+}
+.email-link {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.email-link::after {
+    content: "";
+    position: absolute;
+    left: 0rem;
+    bottom: -.1rem;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+  }
+.email-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 12rem;
+    margin-left: 12rem;
+    margin-top: 2rem;
+}
+.job-experience > div {
+    padding: .5rem;
+}
+.languages > div {
+    padding: .5rem;
+}
+.languages > div > ul {
+    list-style-type: none;
+}
+.skills > ul > li {
+    padding: .5rem;
+    list-style-type: none;
+}
+.skills {
+    padding: .5rem;
+}

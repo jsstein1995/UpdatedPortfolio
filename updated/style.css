@@ -15,7 +15,7 @@ body {
 }
 canvas {
   display: block !important;
-  opacity: .15;
+  opacity: .3;
 }
 hr { 
   color: rgb(0, 0, 0); 
